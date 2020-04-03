@@ -5,7 +5,8 @@ import dagger.Module
 @Module(
     includes = [
         NetworkModule::class,
-        CacheModule::class
+        CacheModule::class,
+        FirebaseModule::class
     ]
 )
 class DataModule

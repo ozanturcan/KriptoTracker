@@ -24,7 +24,7 @@ object Versions {
     val roomVersion = "2.2.1"
     val constraintLayout = "1.1.3"
     val crashlyticsVersion = "17.0.0-beta03"
-    val firebaseAnalyticsVersion = "17.2.1"
+    val firebaseAnalyticsVersion = "17.3.0"
     val gradleVersionPluginVersion = "0.27.0"
     val googleServicesVersion = "4.3.3"
     val fabricVersion = "2.0.0-beta03"

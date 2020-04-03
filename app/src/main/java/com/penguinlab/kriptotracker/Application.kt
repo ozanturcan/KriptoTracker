@@ -2,7 +2,6 @@ package com.penguinlab.kriptotracker
 
 import android.app.Activity
 import android.app.Application
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.penguinlab.kriptotracker.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
@@ -41,11 +40,7 @@ class Application : Application(), HasActivityInjector {
                 CrashReportingTree()
         )
 
-
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
-
-        FirebaseAnalytics.getInstance(this)
-
 
     }
 }

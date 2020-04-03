@@ -8,7 +8,7 @@ object Configs {
     val versionName = calculateVersionName()
     private val versionMajor = 1
     private val versionMinor = 0
-    private val versionPatch = 0
+    private val versionPatch = 1
 
     private fun calculateVersionCode(): Int =
         versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100

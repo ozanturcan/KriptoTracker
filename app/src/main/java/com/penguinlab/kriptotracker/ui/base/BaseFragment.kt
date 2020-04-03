@@ -9,6 +9,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.google.firebase.analytics.FirebaseAnalytics
 import dagger.android.support.DaggerFragment
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
@@ -19,6 +20,9 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : ViewModel> : DaggerFragme
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var firebaseAnalytics: FirebaseAnalytics
 
     lateinit var viewModel: VM
 
@@ -37,6 +41,15 @@ abstract class BaseFragment<DB : ViewDataBinding, VM : ViewModel> : DaggerFragme
         binding.lifecycleOwner = this
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelClass)
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        firebaseAnalytics.setCurrentScreen(
+            requireActivity(),
+            this.javaClass.canonicalName,
+            this.javaClass.canonicalName
+        )
     }
 
     override fun onDestroy() {

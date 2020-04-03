@@ -6,6 +6,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.google.firebase.analytics.FirebaseAnalytics
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
@@ -14,6 +15,10 @@ import javax.inject.Inject
 abstract class BaseActivity<DB : ViewDataBinding, VM : ViewModel> : DaggerAppCompatActivity() {
     @Inject
     internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var firebaseAnalytics: FirebaseAnalytics
+
     lateinit var binding: DB
     lateinit var viewModel: VM
     abstract val viewModelClass: Class<VM>
@@ -25,6 +30,15 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : ViewModel> : DaggerAppCom
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutRes)
         viewModel = ViewModelProviders.of(this, viewModelProviderFactory).get(viewModelClass)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        firebaseAnalytics.setCurrentScreen(
+            this,
+            this.javaClass.canonicalName,
+            this.javaClass.canonicalName
+        )
     }
 
     fun loadFragment(
