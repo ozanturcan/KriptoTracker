@@ -1,2 +1,5 @@
 rootProject.name='KriptoTracker'
 include ':app'
+include ':data'
+include ':model'
+include ':common'
