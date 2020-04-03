@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "868143124696",
+    "firebase_url": "https://kriptotracker.firebaseio.com",
+    "project_id": "kriptotracker",
+    "storage_bucket": "kriptotracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868143124696:android:c2eb9e5254ef33404a47ad",
+        "android_client_info": {
+          "package_name": "com.penguinlab.kriptotracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868143124696-m5848n6ct8vv3erg2iadff4lli9e1tbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3NTLFp6XSFJVP8caU32zn_1k8cGQAl9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868143124696-m5848n6ct8vv3erg2iadff4lli9e1tbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
