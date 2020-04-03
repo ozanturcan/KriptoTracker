@@ -51,7 +51,14 @@ dependencies {
 
     implementation "androidx.core:core-ktx:1.2.0"
 
-
+    // Testing
+    testImplementation Dependencies.junit
+    androidTestImplementation  Dependencies.androidxTestRunner
+    androidTestImplementation  Dependencies.espressoCore
+    testImplementation  Dependencies.truthExt
+    testImplementation  Dependencies.truth
+    testImplementation  Dependencies.mockK
+    testImplementation  Dependencies.coreTesting
 
 
 }
