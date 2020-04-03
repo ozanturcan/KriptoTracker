@@ -3,4 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorBackground">#f5f5f5</color>
+
+    <color name="very_light_pink">#e3e3e3</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="marigold">#ffba00</color>
+
+    <color name="colorWhite900">#FFFFFF</color>
+    <color name="colorBlack500">#1a1824</color>
+    <color name="colorTransparentBlack200">#4A1D1D1D</color>
 </resources>
